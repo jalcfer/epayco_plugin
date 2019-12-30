@@ -45,12 +45,12 @@ function donarEpayco() {
   const radioValue2 = document.getElementById("radioValue2");
   const radioValue3 = document.getElementById("radioValue3");
   const inputValue = document.getElementById('valorDonacion');
-  const P_KEY = document.getElementById('strtest');
+  const P_KEY = document.getElementById('strtest').value;
   let value = 0
   if (radioValue1.checked) value = radioValue1.value
   else if (radioValue2.checked) value = radioValue2.value
   else if (radioValue3.checked) value = radioValue3.value
-  else if (inputValue.value.trim().lenght > 0) value = inputValue.value
+  else if (inputValue.value.trim().length > 0) value = inputValue.value
   else {
     error.textContent = "Debe Seleccionar o escribir un valor"
     return
