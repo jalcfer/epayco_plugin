@@ -2,6 +2,7 @@
 if (!current_user_can('manage_options')) wp_die(__('No tienes suficientes permisos para acceder a esta página.'));
 
 if (isset($_POST['action']) && $_POST['action'] == "salvaropciones") {
+  update_option('top_message', $_POST['top_message']);
   update_option('epayco_P_KEY', $_POST['epayco_p_key']);
   update_option('epayco_callback', $_POST['epayco_callback']);
   update_option('epayco_usd_value1', $_POST['epayco_usd_value1']);
@@ -25,6 +26,10 @@ if (isset($_POST['action']) && $_POST['action'] == "salvaropciones") {
     <input type='hidden' name='action' value='salvaropciones'>
     <div>
       <h2>EPAYCO</h2>
+      <div>
+        <div style='display: inline-block;width: 10%;margin-bottom: 1rem;'>Mensaje</div>
+        <textarea style="width: 40%;" type='text' name='top_message' id='top_message' placeholder="Escribe un mensaje"><?= get_option('top_message') ?></textarea>        
+      </div>
       <div>
         <div style='display: inline-block;width: 10%;margin-bottom: 1rem;'>P_KEY</div>
         <input style="width: 40%;" type='text' name='epayco_p_key' id='epayco_p_key' value='<?= get_option('epayco_P_KEY') ?>'>

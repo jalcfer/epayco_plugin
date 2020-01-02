@@ -20,7 +20,6 @@ function donaciones_ninonuevo_widget($args)
 {
   echo $args['before_widget'];
   echo $args['before_title'] . 'DONACIONES' .  $args['after_title'];
-  echo $args['after_widget'];
   // print some HTML for the widget to display here
   include(DONACIONES_RUTA.'/public/donaciones_ninonuevo_widget.php');
 }

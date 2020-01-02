@@ -69,8 +69,8 @@ function donarEpayco() {
   }
 
   const data = {
-    name: "Donación - Niño nuevo",
-    description: "Donación",
+    name: "Niño nuevo",
+    description: "Niño nuevo",
     currency: document.getElementById('currency').textContent.toLowerCase(),
     amount: parseFloat(value),
     tax_base: "0",

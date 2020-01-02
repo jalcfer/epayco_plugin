@@ -1,8 +1,10 @@
-<?php
-if (!current_user_can('manage_options')) wp_die(__('No tienes suficientes permisos para acceder a esta página.'));
-?>
 <div id="error"></div>
 <div>
+  <div class="wrap" style="margin-bottom: 30px;">
+    <span id="topmsg" style="font-size: 0.8em;line-height: 0px;font-weight: 200;">
+      <?= get_option('top_message') ?>
+    </span>    
+  </div>
   <div class="wrap">
     <input type='hidden' id='usdvalue1' value='<?= get_option('epayco_usd_value1') ?>'>
     <input type='hidden' id='usdvalue2' value='<?= get_option('epayco_usd_value2') ?>'>
